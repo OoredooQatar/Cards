@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Cards (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Player
 
 EXTERNAL SOURCES:
