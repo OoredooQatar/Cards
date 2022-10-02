@@ -109,8 +109,7 @@ import UIKit
         backgroundIV.addSubview(itemSubtitleLbl)
         backgroundIV.addSubview(actionBtn)
         
-        if backgroundImage == nil {  backgroundIV.addSubview(bgIconIV); }
-        else { bgIconIV.alpha = 0 }
+       }
     }
     
   
@@ -118,9 +117,7 @@ import UIKit
         super.draw(rect)
         
         //Draw
-        bgIconIV.image = icon
-        bgIconIV.alpha = backgroundImage != nil ? 0 : 0.6
-        bgIconIV.clipsToBounds = true
+
         
         iconIV.image = icon
         iconIV.clipsToBounds = true
@@ -188,18 +185,18 @@ import UIKit
                                     width: gimme.X(80) - btnWidth,
                                     height: gimme.Y(9))
         
-        bgIconIV.transform = CGAffineTransform.identity
+        //bgIconIV.transform = CGAffineTransform.identity
         
         
         iconIV.layer.cornerRadius = iconRadius
         
-        bgIconIV.frame.size = CGSize(width: iconIV.bounds.width * 2, height: iconIV.bounds.width * 2)
-        bgIconIV.frame.origin = CGPoint(x: gimme.RevX(0, width: bgIconIV.frame.width) + LayoutHelper.Width(40, of: bgIconIV) , y: 0)
-        
-        
-        bgIconIV.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/6))
-        bgIconIV.layer.cornerRadius = iconRadius * 2
-        
+//        bgIconIV.frame.size = CGSize(width: iconIV.bounds.width * 2, height: iconIV.bounds.width * 2)
+//        bgIconIV.frame.origin = CGPoint(x: gimme.RevX(0, width: bgIconIV.frame.width) + LayoutHelper.Width(40, of: bgIconIV) , y: 0)
+//
+//
+//        bgIconIV.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/6))
+//        bgIconIV.layer.cornerRadius = iconRadius * 2
+//
         actionBtn.frame = CGRect(x: gimme.RevX(0, width: btnWidth) - insets,
                                  y: gimme.RevY(0, height: 32) - insets,
                                  width: btnWidth,
